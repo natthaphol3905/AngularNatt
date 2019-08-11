@@ -1,0 +1,25 @@
+<div class="container">
+  <form [formGroup]="productForm">
+    <div>
+      <h2>Edit Product</h2>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Product Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Enter Product Name" formControlName="productName" #productName [(ngModel)]="product.productName">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Category</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Category"
+        formControlName="category" #category [(ngModel)]="product.category">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Price</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Price" formControlName="price"
+        #price [(ngModel)]="product.price">
+    </div>
+
+    <button type="submit" class="btn btn-primary"
+      (click)="clickUpdate(productName.value, category.value, price.value)">Update Product</button>
+  </form>
+</div>
