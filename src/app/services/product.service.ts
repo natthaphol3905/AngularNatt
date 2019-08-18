@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProductService {
 
   constructor(private httpClient: HttpClient) { }
-  url = 'http://localhost:8080/products'
+  url = 'http://104.197.5.179:8080/products'
   // url = 'http://18.136.194.253:8080/products'
 
   getAllProducts() {
